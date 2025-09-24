@@ -1,0 +1,19 @@
+{
+  "name": "watermelon-farm",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Мини-игра \"Ферма арбузов\"",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "keywords": [
+    "vanilla-js",
+    "game",
+    "watermelon",
+    "farm"
+  ],
+  "author": "",
+  "license": "MIT"
+}

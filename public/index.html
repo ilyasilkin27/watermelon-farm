@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ферма арбузов 🍉</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Ферма арбузов 🍉</h1>
+      <div class="controls">
+        <button id="plantBtn" class="btn">Посадить арбуз</button>
+        <button id="harvestBtn" class="btn">Собрать урожай</button>
+        <button id="sellBtn" class="btn btn--primary">Продать арбузы</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <div class="panel">
+          <h2>Сводка</h2>
+          <div id="stats" class="stats"></div>
+        </div>
+        <div class="panel">
+          <h2>Логи</h2>
+          <div id="log" class="log" aria-live="polite"></div>
+        </div>
+      </aside>
+
+      <section class="field" id="field" aria-label="Грядка арбузов"></section>
+    </main>
+
+    <template id="cardTemplate">
+      <button class="card" data-type="watermelon" title="Кликни, чтобы вырастить">
+        <span class="emoji" aria-hidden="true">🍉</span>
+        <span class="name"></span>
+        <span class="size"></span>
+        <span class="status badge"></span>
+      </button>
+    </template>
+
+    <template id="weedTemplate">
+      <div class="card card--weed" data-type="weed" title="Сорняк — не растёт">
+        <span class="emoji" aria-hidden="true">🌿</span>
+        <span class="name">Сорняк</span>
+        <span class="size">–</span>
+        <span class="status badge">мешает</span>
+      </div>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+  </html>
+
