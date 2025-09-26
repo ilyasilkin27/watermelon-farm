@@ -1,10 +1,6 @@
-import http from 'node:http'
-import { promises as fs } from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+const http = require('http')
+const fs = require('fs').promises
+const path = require('path')
 
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3000
 const PUBLIC_DIR = path.join(__dirname, 'public')
