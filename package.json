@@ -6,7 +6,8 @@
   "description": "Мини-игра \"Ферма арбузов\"",
   "scripts": {
     "start": "node server.js",
-    "dev": "NODE_ENV=development node server.js"
+    "dev": "NODE_ENV=development node server.js",
+    "test": "jest"
   },
   "keywords": [
     "vanilla-js",
@@ -15,5 +16,10 @@
     "farm"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "@types/jest": "^29.5.12"
+  }
 }

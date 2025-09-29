@@ -194,3 +194,24 @@ sellBtn.addEventListener('click', sell)
 updateStats()
 addLog('Добро пожаловать на «Ферму арбузов»! Нажмите «Посадить арбуз».')
 
+// Экспорт для тестов / UMD-стиль
+const __api = {
+  Watermelon,
+  generateName,
+  getStatus,
+  createWatermelonCard,
+  plantWatermelon,
+  harvest,
+  sell,
+  watermelons,
+  get coins() {
+    return coins
+  },
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = __api
+} else if (typeof window !== 'undefined') {
+  window.WatermelonFarm = __api
+}
+
